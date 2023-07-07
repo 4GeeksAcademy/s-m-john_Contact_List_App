@@ -6,7 +6,7 @@ export const Context = createContext();
 
 const reducer = (state, action) => {
     
-    switch (action,type) {
+    switch (action.type) {
 
         case ADD_CONTACT: {
 
@@ -18,26 +18,32 @@ const reducer = (state, action) => {
                 ]
             }
         }
+        
+        //  implement this
+        case EDIT_CONTACT: {}
+
+        // implement this
+        case REMOVE_CONTACT: {}
     }
 }
 
 const initialState = {
     contacts: [
         {
-            name: 'Elvis Hernandez'
-            email: 'elvishernandezdev@gmail.com'
-            phone: 'xxx-xxx-xxxx'
-            address: 'test address'
+            name: 'Elvis Hernandez',
+            email: 'elvishernandezdev@gmail.com',
+            phone: 'xxx-xxx-xxxx',
+            address: 'test address',
         }
     ]
 }
 
 export default function Provider(props) {
 
-    const (state, dispatch) = useReducer(reducer, initialState)
+    const [state, dispatch] = useReducer(reducer, initialState)
 
     return (
-        <Context.Provider value={( state, sispatch)}>
+        <Context.Provider value={( state, dispatch)}>
             (props.children)
         </Context.Provider>
     )
