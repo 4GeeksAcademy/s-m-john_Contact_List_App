@@ -1,12 +1,14 @@
 import React, { createContext, useReducer } from 'react';
 
-import const Context = createContext();
+import { ADD_CONTACT, EDIT_CONTACT, REMOVE_CONTACT } from '../context/actions/contactListActions.js'
+
+export const Context = createContext();
 
 const reducer = (state, action) => {
     
     switch (action,type) {
 
-        case 'ADD_CONTACT': {
+        case ADD_CONTACT: {
 
             return {
                 ...state,
