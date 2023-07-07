@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import { Context } from '../context/Provider.jsx'
 
-import
+import { contactListActions } from '../contact/actions/contactListActions.js'
 
 export default function ContactListPage() {
 
@@ -16,7 +16,7 @@ export default function ContactListPage() {
 
             {state.contacts.map((contact) => {
                 <div>
-                    <p>{Context.maps}</p>
+                    <p>(contact.name)</p>
                 </div>
             ))}
 
