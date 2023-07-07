@@ -14,7 +14,7 @@ export default function ContactListPage() {
 
             <button onClick={() => dispatch({ type: 'ADD_CONTACT '})}>Add test contact</button>
 
-            {state.contacts.map((contact) => {
+            {state.contacts.map((contact) => (
                 <div>
                     <p>(contact.name)</p>
                 </div>
